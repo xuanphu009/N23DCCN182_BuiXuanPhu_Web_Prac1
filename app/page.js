@@ -1,10 +1,11 @@
 import ProductCard from "@/components/ProductCard";
 
 async function getProducts() {
-  const res = await fetch("https://fakestoreapi.com/products", {
+  const res = await fetch("https://dummyjson.com/products?limit=20", {
     cache: "no-store",
   });
-  return res.json();
+  const data = await res.json();
+  return data.products; // ⚠️ DummyJSON trả về { products: [...] } khác FakeStore
 }
 
 export default async function HomePage() {

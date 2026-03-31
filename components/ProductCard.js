@@ -7,7 +7,7 @@ export default function ProductCard({ product }) {
         {/* Ảnh sản phẩm */}
         <div className="h-52 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
           <img
-            src={product.image}
+            src={product.thumbnail}
             alt={product.title}
             className="h-44 w-full object-contain group-hover:scale-105 transition-transform duration-300"
           />

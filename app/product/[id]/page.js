@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 async function getProduct(id) {
-  const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
+  const res = await fetch(`https://dummyjson.com/products/${id}`, {
     cache: "no-store",
   });
   return res.json();
@@ -29,7 +29,7 @@ export default async function ProductDetailPage({ params }) {
         {/* Ảnh sản phẩm */}
         <div className="flex-1 flex items-center justify-center bg-gray-50 rounded-xl p-8 min-h-72">
           <img
-            src={product.image}
+            src={product.thumbnail}
             alt={product.title}
             className="max-h-80 w-full object-contain"
           />
